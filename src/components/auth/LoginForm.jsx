@@ -1,4 +1,6 @@
 import { MdOutlineAlternateEmail, MdOutlineLockPerson } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+
 import Button from '../Button';
 import TextInput from '../TextInput';
 
@@ -20,7 +22,11 @@ const LoginForm = () => {
       </Button>
 
       <div className='text-center mt-4 text-gray-900'>
-        {`Don't have an account?`} SignUp instead.
+        {`Don't have an account?`}{' '}
+        <Link to='/signup' className='text-blue-600'>
+          SignUp
+        </Link>{' '}
+        instead.
       </div>
     </form>
   );

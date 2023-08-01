@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { FaUserCircle } from 'react-icons/fa';
 
 const Account = () => {
@@ -6,8 +8,8 @@ const Account = () => {
       <span title='Account'>
         <FaUserCircle size='24px' />
       </span>
-      <a href='signup.html'>Signup</a>
-      <a href='signup.html'>Login</a>
+      <Link to='/signup'>Signup</Link>
+      <Link to='/login'>Login</Link>
     </div>
   );
 };
