@@ -26,15 +26,39 @@ const SignUpForm = () => {
     });
 
   const signupHandler = async (values, action) => {
-    try {
-      await axios.post('http://localhost:8080/users', values);
+    const { email, password } = values;
+    const response = await axios.get('http://localhost:8080/users');
+    const users = response.data;
 
-      action.resetForm();
-      navigate('/login');
-      toast.success('Signup successfully!');
-    } catch (error) {
-      console.error(error);
-      toast.error('Signup failed!');
+    const isExistUser = () => {
+      const booleanArray = users?.map((user) =>
+        user.email === values.email ? true : false
+      );
+
+      if (booleanArray.includes(true)) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    if (isExistUser()) {
+      toast.error('This email is already in use!');
+    } else {
+      try {
+        await axios.post('http://localhost:8080/users', {
+          id: email,
+          email,
+          password,
+        });
+
+        action.resetForm();
+        navigate('/login');
+        toast.success('Signup successfully!');
+      } catch (error) {
+        console.error(error);
+        toast.error('Signup failed!');
+      }
     }
   };
 

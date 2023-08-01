@@ -8,7 +8,7 @@ const Nav = () => {
       <ul className='w-1/2 h-16 list-none flex justify-between items-center font-bold ml-8'>
         <li>
           <Link to='/' className='flex justify-center items-center'>
-            <h3 className='text-lg font-bold text-blue-700'>GenNext TMS</h3>
+            <h3 className='text-xl font-bold text-blue-700'>GenNext TMS</h3>
           </Link>
         </li>
       </ul>
