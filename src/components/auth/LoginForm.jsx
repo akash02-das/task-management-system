@@ -5,8 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { loginSchema } from '../../schemas';
-import Button from '../Button';
-import TextInput from '../TextInput';
+import Button from '../lib/Button';
+import TextInput from '../lib/TextInput';
 
 const LoginForm = () => {
   const navigate = useNavigate();

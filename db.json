@@ -9,6 +9,29 @@
       "id": "test@example.com",
       "email": "test@example.com",
       "password": "11111111"
+    },
+    {
+      "id": "aku.das02@gmail.com",
+      "email": "aku.das02@gmail.com",
+      "password": "11111111"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "Test title",
+      "description": "Test description",
+      "status": "medium",
+      "assignee": "test@example.com",
+      "dueDate": "2023-08-04T18:49:20.000Z",
+      "id": 1
+    },
+    {
+      "name": "Task Management System",
+      "description": "Create a task management system for a team to manage tasks and collaborate efficiently.",
+      "status": "highest",
+      "assignee": "aku.das02@gmail.com",
+      "dueDate": "2023-08-02T19:03:21.554Z",
+      "id": 2
     }
   ]
 }

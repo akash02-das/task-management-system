@@ -4,11 +4,13 @@ import { MdOutlineAlternateEmail, MdOutlineLockPerson } from 'react-icons/md';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+import useUsers from '../../hooks/useUsers';
 import { signUpSchema } from '../../schemas';
-import Button from '../Button';
-import TextInput from '../TextInput';
+import Button from '../lib/Button';
+import TextInput from '../lib/TextInput';
 
 const SignUpForm = () => {
+  const { users } = useUsers('http://localhost:8080/users');
   const navigate = useNavigate();
 
   const initialValues = {
@@ -27,8 +29,6 @@ const SignUpForm = () => {
 
   const signupHandler = async (values, action) => {
     const { email, password } = values;
-    const response = await axios.get('http://localhost:8080/users');
-    const users = response.data;
 
     const isExistUser = () => {
       const booleanArray = users?.map((user) =>

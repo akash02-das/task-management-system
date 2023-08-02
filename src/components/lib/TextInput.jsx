@@ -8,7 +8,7 @@ const TextInput = ({ icon, errors, touched, ...rest }) => {
       >
         <input
           {...rest}
-          className='border-none outline-none w-full h-full py-1 px-3 bg-white text-lg font-medium'
+          className='border-none outline-none w-full h-full py-1 px-3 text-lg font-medium'
         />
         <span className='w-10 h-10 text-xl flex justify-center items-center'>
           {icon}
