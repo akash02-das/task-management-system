@@ -2,14 +2,10 @@ import { useState } from 'react';
 import Modal from '../components/lib/Modal';
 import TaskForm from '../components/task/TaskForm';
 import TaskList from '../components/task/TaskList';
-// import useTasks from '../hooks/useTasks';
 
 const Dashboard = () => {
   const [showModal, setShowModal] = useState(false);
-
-  // const [taskList, setTaskList] = useState([]);
-
-  // console.log(taskList);
+  const [taskList, setTaskList] = useState([]);
 
   const openModalHandler = () => {
     setShowModal(true);
@@ -31,7 +27,7 @@ const Dashboard = () => {
         </button>
       </div>
 
-      <TaskList />
+      <TaskList taskList={taskList} setTaskList={setTaskList} />
 
       <Modal
         title='Create task'
@@ -40,8 +36,8 @@ const Dashboard = () => {
       >
         <TaskForm
           closeModal={closeModalHandler}
-          // tasks={tasks}
-          // setTaskList={setTaskList}
+          taskList={taskList}
+          setTaskList={setTaskList}
         />
       </Modal>
     </div>

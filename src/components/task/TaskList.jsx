@@ -1,9 +1,14 @@
+import { useEffect } from 'react';
 import useTasks from '../../hooks/useTasks';
 import Loader from '../lib/Loader';
 import Task from './Task';
 
-const TaskList = () => {
+const TaskList = ({ taskList, setTaskList }) => {
   const { tasks, loading, error } = useTasks('http://localhost:8080/tasks');
+
+  useEffect(() => {
+    setTaskList(tasks);
+  }, [tasks, setTaskList]);
 
   if (loading) {
     return <Loader />;
@@ -15,8 +20,8 @@ const TaskList = () => {
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 my-10'>
-      {tasks?.map((task) => (
-        <div key={task.id}>
+      {taskList?.map((task) => (
+        <div key={task.dueDate}>
           <Task task={task} />
         </div>
       ))}

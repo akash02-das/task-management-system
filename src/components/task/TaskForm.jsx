@@ -1,13 +1,13 @@
+import axios from 'axios';
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { toast } from 'react-toastify';
 
-import axios from 'axios';
 import useUsers from '../../hooks/useUsers';
 import { createTaskSchema } from '../../schemas';
 
-const TaskForm = ({ closeModal }) => {
+const TaskForm = ({ closeModal, taskList, setTaskList }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const { users } = useUsers('http://localhost:8080/users');
@@ -33,6 +33,8 @@ const TaskForm = ({ closeModal }) => {
 
     try {
       await axios.post('http://localhost:8080/tasks', values);
+
+      setTaskList([...taskList, values]);
 
       action.resetForm();
       closeModal();
