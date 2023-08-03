@@ -14,6 +14,11 @@
       "id": "aku.das02@gmail.com",
       "email": "aku.das02@gmail.com",
       "password": "11111111"
+    },
+    {
+      "id": "test2@gmail.com",
+      "email": "test2@gmail.com",
+      "password": "11111111"
     }
   ],
   "tasks": [
@@ -22,7 +27,7 @@
       "description": "Create a task management system for a team to manage their tasks and collaborate effectively.",
       "assignee": "aku.das02@gmail.com",
       "dueDate": "2023-08-03T05:20:34.000Z",
-      "status": "In Progress",
+      "status": "Complete",
       "comments": [
         {
           "sender": "akash@example.com",
@@ -43,6 +48,15 @@
       "status": "To Do",
       "comments": [],
       "id": 2
+    },
+    {
+      "name": "Test task 2",
+      "description": "Testing description ",
+      "assignee": "test2@gmail.com",
+      "dueDate": "2023-08-18T07:27:38.000Z",
+      "status": "In Progress",
+      "comments": [],
+      "id": 3
     }
   ]
 }
