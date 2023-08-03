@@ -1,13 +1,13 @@
 import axios from 'axios';
-import moment from 'moment';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { dateFormatter } from '../../utils/dateFormatter';
 
 const Task = ({ task }) => {
   const { name, dueDate, status, id } = task;
   const [showStatus, setShowStatus] = useState(status);
 
-  const showDueDate = moment(dueDate).format('DD-MMM-YYYY');
+  const showDueDate = dateFormatter(dueDate);
 
   const statusArray = ['To Do', 'In Progress', 'Complete'];
   const filterStatus = statusArray.filter((item) => item !== showStatus);

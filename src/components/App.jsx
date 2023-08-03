@@ -7,6 +7,7 @@ import Dashboard from '../pages/Dashboard';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
+import TaskDetails from '../pages/TaskDetails';
 import PrivateOutlet from '../routes/PrivateOutlet';
 import PublicOutlet from '../routes/PublicOutlet';
 import Layout from './Layout';
@@ -28,6 +29,7 @@ function App() {
             {/* Private Routes */}
             <Route path='/*' element={<PrivateOutlet />}>
               <Route path='dashboard' element={<Dashboard />} />
+              <Route path='tasks/:id' element={<TaskDetails />} />
             </Route>
           </Routes>
         </Layout>
