@@ -1,8 +1,29 @@
-# React + Vite
+## Task Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A complete task management system for a team to manage their tasks and collaborate effectively
 
-Currently, two official plugins are available:
+#### Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**This project uses `react@18` with `react-router-dom@6` for handle routing and TailwindCSS for styles**
+
+_After cloning this project and go to the project directory, you have to run:_
+
+**`npm install` or `yarn install`**
+
+and
+
+**`npm run dev` or `yarn run dev`**
+
+_and your development environment is ready._
+
+#### Setup for backend
+
+_Used **`json-server`** package for backend api(static or mock data). In the project directory, have to run following commands:_
+
+**`npm run start:backend` or `yarn run start:backend`**
+
+#### Contributors
+
+[Akash Das](https://github.com/akash02-das)
+
+_Happy Hacking!_
