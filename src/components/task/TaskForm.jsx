@@ -15,7 +15,6 @@ const TaskForm = ({ closeModal, taskList, setTaskList }) => {
   const initialValues = {
     name: '',
     description: '',
-    status: '',
     assignee: '',
   };
 
@@ -30,6 +29,7 @@ const TaskForm = ({ closeModal, taskList, setTaskList }) => {
 
   const taskCreateHandler = async (values, action) => {
     values['dueDate'] = selectedDate;
+    values['status'] = 'To Do';
 
     try {
       await axios.post('http://localhost:8080/tasks', values);
@@ -89,25 +89,7 @@ const TaskForm = ({ closeModal, taskList, setTaskList }) => {
             className='bg-gray-100 text-gray-700 font-semibold rounded-md border border-gray-500'
           />
         </div>
-        <div className='my-4'>
-          <select
-            name='status'
-            value={values.status}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className='bg-gray-50 border border-gray-300 text-gray-700 text-md rounded-md focus:border-blue-500 block w-full p-2'
-          >
-            <option defaultValue=''>Choose a status</option>
-            <option value='highest'>Highest</option>
-            <option value='high'>High</option>
-            <option value='medium'>Medium</option>
-            <option value='low'>Low</option>
-            <option value='lowest'>Lowest</option>
-          </select>
-          {errors.status && touched.status ? (
-            <p className='text-red-500 text-sm mt-1 mb-4'>{errors.status}</p>
-          ) : null}
-        </div>
+
         <div className='my-4'>
           <select
             name='assignee'

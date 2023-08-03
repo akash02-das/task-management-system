@@ -13,6 +13,5 @@ export const loginSchema = Yup.object({
 export const createTaskSchema = Yup.object({
   name: Yup.string().required('Please enter name'),
   description: Yup.string().required('Please enter description'),
-  status: Yup.string().required('Please choose a status'),
   assignee: Yup.string().required('Please choose an assignee'),
 });
