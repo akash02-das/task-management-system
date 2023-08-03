@@ -18,28 +18,31 @@
   ],
   "tasks": [
     {
-      "name": "Drew Rios",
-      "description": "In anim lorem nulla ",
-      "assignee": "test@example.com",
-      "dueDate": "2023-08-12T02:07:17.000Z",
-      "status": "Complete",
+      "name": "Task Management System",
+      "description": "Create a task management system for a team to manage their tasks and collaborate effectively.",
+      "assignee": "aku.das02@gmail.com",
+      "dueDate": "2023-08-03T05:20:34.000Z",
+      "status": "In Progress",
+      "comments": [
+        {
+          "sender": "akash@example.com",
+          "comment": "Comment testing!"
+        },
+        {
+          "sender": "test@example.com",
+          "comment": "Hey, comments from test user!"
+        }
+      ],
       "id": 1
     },
     {
-      "name": "Sonya Knox",
-      "description": "Asperiores occaecat ",
+      "name": "Test task",
+      "description": "Test task description",
       "assignee": "test@example.com",
-      "dueDate": "2023-08-03T02:08:18.000Z",
+      "dueDate": "2023-08-10T05:21:48.000Z",
       "status": "To Do",
+      "comments": [],
       "id": 2
-    },
-    {
-      "name": "Kyla Knight",
-      "description": "Amet id consectetu",
-      "assignee": "akash@example.com",
-      "dueDate": "2023-08-23T02:09:24.000Z",
-      "status": "Complete",
-      "id": 3
     }
   ]
 }

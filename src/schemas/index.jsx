@@ -15,3 +15,7 @@ export const createTaskSchema = Yup.object({
   description: Yup.string().required('Please enter description'),
   assignee: Yup.string().required('Please choose an assignee'),
 });
+
+export const commentSchema = Yup.object({
+  comment: Yup.string().required('Please enter your comment'),
+});

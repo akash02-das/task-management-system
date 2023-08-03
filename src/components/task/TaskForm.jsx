@@ -30,6 +30,7 @@ const TaskForm = ({ closeModal, taskList, setTaskList }) => {
   const taskCreateHandler = async (values, action) => {
     values['dueDate'] = selectedDate;
     values['status'] = 'To Do';
+    values['comments'] = [];
 
     try {
       await axios.post('http://localhost:8080/tasks', values);
